@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PropertyController!{% endblock %}
+
+{% block body %}
+
+{% for propperties in property %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{ propperties.title }}
+            </div>
+            <div class="col-md-6">
+                {{ propperties.createdAt |date('d/m/y') }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{ propperties.description}}
+            </div>
+            <div class="col-md-6">
+                {{ propperties.price }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

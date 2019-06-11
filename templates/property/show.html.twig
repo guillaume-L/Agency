@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+{% block body %}
+    <h1>Bienvenu dans property</h1>
+    {{ include ('_propertyForm.html.twig', { form: property_form, button: 'creer' }) }}
+
+{% endblock %}
