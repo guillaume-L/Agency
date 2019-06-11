@@ -52,7 +52,7 @@ class Property
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
     private $heat;
 
@@ -72,7 +72,7 @@ class Property
     private $zipCode;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", options={"default":false})
      */
     private $sold;
 

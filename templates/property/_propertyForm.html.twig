@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block body %}
+    {{ form_start(property_form) }}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {{ form_row(property_form.title) }}
+                </div>
+                <div class="col-md-6">
+                    {{ form_row(property_form.createdAt) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ form_row(property_form.description) }}
+                </div>
+                <div class="col-md-6">
+                    {{ form_row(property_form.price) }}
+                </div>
+            </div>
+        </div>
+    {{ form_widget(property_form) }}
+    <button class="btn btn-success">{{ button|default('Enregistrer') }} </button>
+    {{ form_end(property_form) }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
